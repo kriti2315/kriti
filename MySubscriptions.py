@@ -7,11 +7,11 @@ def get_newspaper_combinations(budget):
                   "BM": [1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5],
                   "HT": [2, 2, 2, 2, 2, 4, 4]}
     
-    # generate all possible combinations of newspapers
+  
     combinations = [combination for length in range(1, len(newspapers)+1)
                     for combination in product(newspapers, repeat=length)]
     
-    # flatten the combinations
+   
     combinations = [{k: v for sub_combination in combinations}]
     
     valid_combinations = []
